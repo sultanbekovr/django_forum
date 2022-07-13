@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static%}
+
+
+{% block panel %}
+<div class="panel">
+
+            <div class="panelCat">
+                <img src="{% static 'image/Lock.png'%}" alt="" class="panelImg">
+                <a href="{% url 'login' %}">Войти</a>
+            </div>
+
+            <hr>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Book-open.png'%}" alt=""  class="panelImg">
+                <a href="">Новости</a>
+            </div>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Chat.png'%}" alt="" class="panelImg">
+                <a href="">Все вопросы</a>
+            </div>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Clipboard-alt.png'%}" alt=""  class="panelImg">
+                <a href="">Категории</a>
+            </div>
+
+        </div>
+{% endblock %}
+
+{% block cntr %}
+<div class="cntr">
+            <h2>
+                Все вопросы
+            </h2>
+
+            <div class="choose">
+                <div class="chooseItem">
+                    <p>Популярные</p>
+                </div>
+
+                <div class="chooseItem">
+                    <p>Новые</p>
+                </div>
+
+                <div class="chooseItem">
+                    <p>Без овтетов</p>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>Java -> строки</p>
+                <h3>Как взять один элемент строки который стоит в массиве?</h3>
+                <div class="info">
+                    <p>9 часов назад </p>
+                    <p class="qfsec">150 просмотров</p>
+                </div>
+
+                <hr>
+            </div>
+
+        </div>
+{% endblock %}
+
+{% block pop %}
+<div class="pop">
+            <div class="title">
+                <h5>ПОПУЛЯРНОЕ ЗА 24 ЧАСА</h5>
+                <hr>
+            </div>
+
+            <div class="popularQues">
+                <p>Как сделать тотото?</p>
+                <p class="popularQuesInfo">4 ответа</p>
+
+                <hr>
+            </div>
+        </div>
+{% endblock %}

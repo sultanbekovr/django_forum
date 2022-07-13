@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block panel %}
+<div class="panel">
+
+            <div class="panelCat">
+                <img src="{% static 'image/Lock.png'%}" alt="" class="panelImg">
+                <a href="{% url 'login' %}">Войти</a>
+            </div>
+
+            <hr>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Book-open.png'%}" alt=""  class="panelImg">
+                <a href="">Новости</a>
+            </div>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Chat.png'%}" alt="" class="panelImg">
+                <a href="">Все вопросы</a>
+            </div>
+
+            <div class="panelCat">
+                <img src="{% static 'image/Clipboard-alt.png'%}" alt=""  class="panelImg">
+                <a href="">Категории</a>
+            </div>
+
+        </div>
+
+<div>
+    <h1>Регистрация</h1>
+
+    <form method="post">
+    {% csrf_token %}
+
+    {{form.as_p}}
+    <button type="submit" class = 'btn btn-primary'>Войти</button>
+    </form>
+
+<p>Вы еще не зарегистроированы? <a href="{% url 'register'%}">Регистрация</a></p>
+</div>
+
+
+
+{% endblock %}
